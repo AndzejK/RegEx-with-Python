@@ -5,6 +5,6 @@ import re
 with open('ips.txt','r') as file:
     content=file.read()
 # Let's create a pattern that can find these IPS, e.x. 192.168.120.111
-pattern=re.compile('[0-9]{3}\.[0-9]{3}\.12[0-9]{1}\.[0-9]{3}')
+pattern=re.compile('[0-9]{1,3}\.[0-9]{1,3}\.12[0-9]{0,1}\.[0-9]{1,3}')
 matches=pattern.findall(content)
 print(matches)
